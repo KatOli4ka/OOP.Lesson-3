@@ -1,3 +1,4 @@
+import transport.Bus;
 import transport.Car;
 import transport.Train;
 
@@ -33,7 +34,13 @@ public class Main {
         System.out.println(martin.toString());
         System.out.println(leningrad.toString());
 
-
-
+        System.out.println();
+        System.out.println("ДЗ-1. Задание 3");
+        Bus liaz=new Bus("ЛиАЗ", "5256",2001,"Россия","разноцветный",90);
+        Bus ikarus=new Bus("Ikarus", "280",1987,"Венгрия","красный", 70);
+        Bus paz=new Bus("ПАЗ","",1998,"Россия","",65);
+        System.out.println(liaz.toString());
+        System.out.println(ikarus.toString());
+        System.out.println(paz.toString());
     }
 }
