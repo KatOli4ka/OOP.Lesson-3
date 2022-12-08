@@ -12,10 +12,10 @@ public class Car extends Transport {
     private Key key;
     private Insurance insurance;
 
-    public Car(String model,String brand,int year,String country,String color,
+    public Car(String model,String brand,int year,String country,String color,int maxSpeed,
                double engineVolume, String transmission, String bodyType, String regNumber,
                int seatsCount, boolean summerTires, Key key, Insurance insurance){
-        super(brand,model,year,country,color);
+        super(brand,model,year,country,color,maxSpeed);
         setTransmission(transmission);
         setEngineVolume(engineVolume);
         if (bodyType == null|| bodyType.isEmpty()){
@@ -99,7 +99,7 @@ public class Car extends Transport {
     }
     public String toString() {
         return this.getBrand()+ " "+this.getModel()+", "+this.getYear()+" года выпуска, сборка - "+this.getCountry()+
-                ", цвет кузова- "+this.getColor()+", объем двигателя - "+this.engineVolume+
+                ", цвет кузова- "+this.getColor()+", макс.скорость - "+getMaxSpeed()+" км/ч, объем двигателя - "+this.engineVolume+
                 ", коробка передач -"+getTransmission()+",тип кузова - "+getBodyType()+
                 ", регистрационный номер - "+isCorrectRegNumber()+", количество мест - "+getSeatsCount()+
                 ", тип резины - "+summerTires+key+insurance;

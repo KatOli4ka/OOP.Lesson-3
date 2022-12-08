@@ -8,9 +8,6 @@ public class Transport {
     private String color;
     private int maxSpeed;
 
-    public Transport(String brand, String model, int year, String country, String color) {
-        this(brand,model,year,country,color,0);
-    }
     public Transport(String brand, String model, int year, String country, String color, int maxSpeed) {
         setBrand(brand);
         setModel(model);
@@ -26,7 +23,7 @@ public class Transport {
 
     public void setBrand(String brand) {
         if (brand == null || brand.isEmpty()) {
-            brand = "Lada";
+            brand = "Не указан";
         }
         this.brand = brand;
     }
@@ -37,7 +34,7 @@ public class Transport {
 
     public void setModel(String model) {
         if (model == null || model.isEmpty()) {
-            model = "2109";
+            model = "Не указана";
         }
         this.model = model;
     }
@@ -55,7 +52,7 @@ public class Transport {
 
     public void setColor(String color) {
         if (color == null || color.isEmpty()) {
-            color = "белый";
+            color = "черный";
         }  this.color = color;
     }
     public int getMaxSpeed() {
@@ -63,8 +60,10 @@ public class Transport {
     }
 
     public void setMaxSpeed(int maxSpeed) {
-        if (maxSpeed > 150) {
-            maxSpeed=150;
+        if (maxSpeed > 350) {
+            maxSpeed=350;
         }  this.maxSpeed = maxSpeed;
     }
+
+
 }
