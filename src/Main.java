@@ -17,7 +17,7 @@ public class Main {
         Car kia = new Car("Sportage 4-го поколения", "Kia", 2018, "Южная Корея", "",
                 2, "автомат", "седан", "д123д123д", 4, false,null,null);
         System.out.println(kia.toString());
-        Car hyundai = new Car("Avante", "Hyundai", 0, "Южная Корея", "оранжевый",
+        Car hyundai = new Car("Avante", "Hyundai", 2015, "Южная Корея", "оранжевый",
                 1.6, "", "седан", "э123ээ111", 6, true,null,null);
         System.out.println(hyundai.toString());
 
