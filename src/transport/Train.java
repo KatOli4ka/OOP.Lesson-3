@@ -7,9 +7,10 @@ public class Train extends Transport{
     final private String endStation;
     final private int wagonNum;
 
-    public Train(String brand, String model, int year, String country, String color,int maxSpeed, double priceTrip,
+    public Train(String brand, String model, int year, String country, String color,int maxSpeed,
+                 String fuelPercentage,double priceTrip,
                  double timeTrip, String depStationName, String endStation, int wagonNum) {
-        super(brand, model, year, country, color,maxSpeed);
+        super(brand, model, year, country, color,maxSpeed,fuelPercentage);
         setPriceTrip(priceTrip);
         setTimeTrip(timeTrip);
         this.depStationName = depStationName;
@@ -52,8 +53,14 @@ public class Train extends Transport{
     @Override
     public String toString() {
         return this.getBrand()+ " "+this.getModel()+", "+this.getYear()+" года выпуска, сборка - "+this.getCountry()+
-                ", макс.скорость - "+getMaxSpeed()+" км/ч, цена билета - "+ priceTrip +", время в пути - " + timeTrip
+                ", макс.скорость - "+getMaxSpeed()+" км/ч, кол-во топлива в % - "+getFuelPercentage()+
+                ", цена билета - "+ priceTrip +", время в пути - " + timeTrip
                 +", станция отправления - " + depStationName + ", станция назначения - " + endStation +
                 ", кол-во вагонов - " + wagonNum;
+    }
+
+    @Override
+    public void refill() {
+        System.out.println("Нужно заправлять дизелем");
     }
 }

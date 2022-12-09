@@ -1,20 +1,25 @@
 package transport;
 
-public class Transport {
+import java.util.regex.Pattern;
+
+public abstract class Transport {
     private String brand;
     private String model;
     final private int year;
     final private String country;
     private String color;
     private int maxSpeed;
+    private String fuelPercentage;
 
-    public Transport(String brand, String model, int year, String country, String color, int maxSpeed) {
+    public Transport(String brand, String model, int year, String country, String color, int maxSpeed,
+                     String fuelPercentage) {
         setBrand(brand);
         setModel(model);
         this.year = year;
         this.country = country;
         setColor(color);
         setMaxSpeed(maxSpeed);
+        setFuelPercentage(fuelPercentage);
     }
 
     public String getBrand() {
@@ -24,8 +29,7 @@ public class Transport {
     public void setBrand(String brand) {
         if (brand == null || brand.isEmpty()) {
             brand = "Не указан";
-        }
-        this.brand = brand;
+        }  this.brand = brand;
     }
 
     public String getModel() {
@@ -35,8 +39,7 @@ public class Transport {
     public void setModel(String model) {
         if (model == null || model.isEmpty()) {
             model = "Не указана";
-        }
-        this.model = model;
+        }  this.model = model;
     }
     public int getYear() {
         return year;
@@ -52,7 +55,7 @@ public class Transport {
 
     public void setColor(String color) {
         if (color == null || color.isEmpty()) {
-            color = "черный";
+            color = "не указан";
         }  this.color = color;
     }
     public int getMaxSpeed() {
@@ -65,5 +68,17 @@ public class Transport {
         }  this.maxSpeed = maxSpeed;
     }
 
+    public String getFuelPercentage() {
+        return fuelPercentage;
+    }
 
+    public void setFuelPercentage(String fuelPercentage) {
+        if (fuelPercentage == null || fuelPercentage.isEmpty()) {
+            fuelPercentage="Не указан";
+        }this.fuelPercentage = fuelPercentage;
+
+    }
+   
+
+    public abstract void refill();
 }
