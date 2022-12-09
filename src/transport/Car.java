@@ -12,7 +12,7 @@ public class Car extends Transport {
     private Key key;
     private Insurance insurance;
 
-    public Car(String model,String brand,int year,String country,String color,int maxSpeed,String fuelPercentage,
+    public Car(String model,String brand,int year,String country,String color,int maxSpeed,double fuelPercentage,
                double engineVolume, String transmission, String bodyType, String regNumber,
                int seatsCount, boolean summerTires, Key key, Insurance insurance){
         super(brand,model,year,country,color,maxSpeed,fuelPercentage);

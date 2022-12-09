@@ -8,7 +8,7 @@ public class Train extends Transport{
     final private int wagonNum;
 
     public Train(String brand, String model, int year, String country, String color,int maxSpeed,
-                 String fuelPercentage,double priceTrip,
+                double fuelPercentage,double priceTrip,
                  double timeTrip, String depStationName, String endStation, int wagonNum) {
         super(brand, model, year, country, color,maxSpeed,fuelPercentage);
         setPriceTrip(priceTrip);

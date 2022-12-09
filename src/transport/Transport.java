@@ -9,10 +9,10 @@ public abstract class Transport {
     final private String country;
     private String color;
     private int maxSpeed;
-    private String fuelPercentage;
+    private double fuelPercentage;
 
     public Transport(String brand, String model, int year, String country, String color, int maxSpeed,
-                     String fuelPercentage) {
+                     double fuelPercentage) {
         setBrand(brand);
         setModel(model);
         this.year = year;
@@ -68,17 +68,16 @@ public abstract class Transport {
         }  this.maxSpeed = maxSpeed;
     }
 
-    public String getFuelPercentage() {
+    public double getFuelPercentage() {
         return fuelPercentage;
     }
 
-    public void setFuelPercentage(String fuelPercentage) {
-        if (fuelPercentage == null || fuelPercentage.isEmpty()) {
-            fuelPercentage="Не указан";
-        }this.fuelPercentage = fuelPercentage;
-
+    public void setFuelPercentage(double fuelPercentage) {
+        if (fuelPercentage <= 0) {
+            fuelPercentage= 5;        }
+        this.fuelPercentage = fuelPercentage;
     }
-   
+
 
     public abstract void refill();
 }
