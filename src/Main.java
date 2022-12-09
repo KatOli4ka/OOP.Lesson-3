@@ -1,3 +1,4 @@
+import Animal.*;
 import transport.Bus;
 import transport.Car;
 import transport.Train;
@@ -71,5 +72,38 @@ public class Main {
         System.out.println(paz.toString());
         System.out.print("*** ");
         paz.refill();
+        System.out.println();
+        System.out.println("Задание 3");
+        Herbivorous gazelle=new Herbivorous("газель", 6,"полупустыня",115,"трава");
+        Herbivorous gazelle1=new Herbivorous("газель", 6,"полупустыня",115,"трава");
+        Herbivorous giraff=new Herbivorous("жираф",2,"тропические степи",-55,"листва");
+        Herbivorous horse=new Herbivorous("лошадь",3,"степи",60,"силос");
+        Predator hyena=new Predator("гиена",3,"полустепи",60,"падаль");
+        Predator tiger=new Predator("тигр",-9,"во многих местах",65,"мясо");
+        Predator bear=new Predator("медведь",15,"встречается во многих местах", 50,"трава и мясо");
+        Amphibian frog=new Amphibian("лягушка",1,"водоём");
+        Amphibian grassSnake=new Amphibian("уж обыкновенный",-1,"степи");
+        Flightless peacock=new Flightless("павлин",3,"саванна","не летает");
+        Flightless penguin=new Flightless("пингвин",11,"Антарктида","");
+        Flightless dodo=new Flightless("птица Додо",0,"вымерла","");
+        Flight seagull=new Flight("чайка", 3,"","летает");
+        Flight albatross=new Flight("альбатрос",6,"Антарктида","");
+        Flight falcon=new Flight("сокол",8,"","летает");
+
+        System.out.println(gazelle.toString());
+        System.out.println(gazelle.equals(gazelle1));
+        System.out.println(giraff.toString());
+        System.out.println(falcon.equals(dodo));
+        System.out.println(horse.toString());
+        System.out.println(grassSnake.toString());
+        System.out.println(frog.toString());
+        System.out.println(peacock.toString());
+        System.out.println(penguin.toString());
+        System.out.println(dodo.toString());
+        System.out.println(seagull.toString());
+        System.out.println(albatross.toString());
+        System.out.println(falcon.toString());
+
     }
+
 }

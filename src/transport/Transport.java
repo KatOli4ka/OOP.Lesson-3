@@ -77,7 +77,7 @@ public abstract class Transport {
             fuelPercentage= 5;        }
         this.fuelPercentage = fuelPercentage;
     }
-
-
     public abstract void refill();
+
+
 }
